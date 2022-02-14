@@ -13,8 +13,8 @@
     "consumer": "node --experimental-json-modules --experimental-top-level-await src/consumer-cli.js",
     "consumer:dev": "nodemon --exec npm run consumer",
     "provider": "npx json-server --watch src/provider-server.json --port 3001",
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests --runInBand",
     "test:unit": "yarn test --watch -c jest-unit-config.js",
     "test:coverage": "yarn test --coverage"
   },
