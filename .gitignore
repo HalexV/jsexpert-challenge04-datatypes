@@ -1,4 +1,5 @@
 node_modules
+coverage
 
 # Nota: por padrão, o .env não deve ser versionado no git, apenas o .env.example, mas aqui estamos abrindo uma exceção para facilitar a configuração dos alunos.
 # .env
