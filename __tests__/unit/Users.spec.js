@@ -10,4 +10,10 @@ describe('Entity Users', () => {
     expect(Object.getOwnPropertySymbols(users)).toStrictEqual([])
     expect(Object.getOwnPropertyNames(users)).toStrictEqual([])
   })
+
+  it('should be able to get the size', () => {
+    const users = new Users()
+
+    expect(users.size()).toBe(0)
+  })
 })
