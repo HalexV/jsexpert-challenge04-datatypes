@@ -2,11 +2,15 @@ import User from './User.js';
 
 // TODO: Criar um Symbol para a propriedade privada 'kUsers'
 class Users {
-  static #kData = Symbol('data');
+  #kData = Symbol('data');
   constructor() {
-    this[Users.#kData] = new Map()
+    this[this.#kData] = new Map()
     return new Proxy(this, {
-      ownKeys: () => []
+      ownKeys: () => [],
+      get(target, prop, receiver) {
+        let value = Reflect.get(...arguments);
+        return typeof value == 'function' ? value.bind(target) : value;
+      }
     })
   }
 
@@ -21,7 +25,7 @@ class Users {
   }
 
   size() {
-    return this[Users.#kData].size
+    return this[this.#kData].size
   }
 
   // TODO: Me parece que o objeto gerado precisa ser iterável 🤔
