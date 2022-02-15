@@ -2,8 +2,12 @@ import User from './User.js';
 
 // TODO: Criar um Symbol para a propriedade privada 'kUsers'
 class Users {
+  #kData = Symbol('data');
   constructor() {
-    // TODO: inicializar a propriedade privada 'kData' como uma estrutura importante vista no curso
+    this[this.#kData] = new Map()
+    return new Proxy(this, {
+      ownKeys: () => []
+    })
   }
 
   add(userRaw) {
