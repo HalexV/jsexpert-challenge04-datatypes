@@ -2,9 +2,9 @@ import User from './User.js';
 
 // TODO: Criar um Symbol para a propriedade privada 'kUsers'
 class Users {
-  #kData = Symbol('data');
+  static #kData = Symbol('data');
   constructor() {
-    this[this.#kData] = new Map()
+    this[Users.#kData] = new Map()
     return new Proxy(this, {
       ownKeys: () => []
     })
@@ -18,6 +18,10 @@ class Users {
   hasUsers() {
     // TODO: Como saber se tem informação dentro da estrutura escolhida?
     return false;
+  }
+
+  size() {
+    return this[Users.#kData].size
   }
 
   // TODO: Me parece que o objeto gerado precisa ser iterável 🤔
