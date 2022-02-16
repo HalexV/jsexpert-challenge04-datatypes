@@ -4,7 +4,7 @@ import User from './User.js';
 class Users {
   #kData = Symbol('data');
   constructor() {
-    this[this.#kData] = new Map()
+    this[this.#kData] = new Set()
     return new Proxy(this, {
       ownKeys: () => [],
       get(target, prop, receiver) {
@@ -16,7 +16,7 @@ class Users {
 
   add(userRaw) {
     const user = new User(userRaw);
-    // TODO: inserir valor na estrutura escolhida.
+    this[this.#kData].add(user)
   }
 
   hasUsers() {
