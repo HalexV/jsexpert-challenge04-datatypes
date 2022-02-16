@@ -16,4 +16,12 @@ describe('Entity Users', () => {
 
     expect(users.size()).toBe(0)
   })
+
+  it('should be able to add a user', () => {
+    const users = new Users()
+
+    users.add({ id: 'any_id' })
+
+    expect(users.size()).toBe(1)
+  })
 })
