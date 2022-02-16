@@ -27,7 +27,9 @@ class Users {
     return this[this.#kData].size
   }
 
-  // TODO: Me parece que o objeto gerado precisa ser iterável 🤔
+  [Symbol.iterator]() {
+    return this[this.#kData][Symbol.iterator]()
+  }
 }
 
 export default Users;
