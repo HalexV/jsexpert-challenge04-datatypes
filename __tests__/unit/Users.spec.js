@@ -34,4 +34,17 @@ describe('Entity Users', () => {
 
     expect(users.hasUsers()).toBe(true)
   })
+
+  it('should be able to iterate over the users object', () => {
+    const users = new Users()
+
+    users.add({ id: 'any_id0' })
+    users.add({ id: 'any_id1' })
+    users.add({ id: 'any_id2' })
+
+    const result = Array.from(users)
+
+    expect(result.length).toBe(3)
+    expect(result).toStrictEqual([new User({ id: 'any_id0' }),new User({ id: 'any_id1' }),new User({ id: 'any_id2' })])
+  })
 })
