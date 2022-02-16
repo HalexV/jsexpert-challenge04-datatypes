@@ -20,8 +20,7 @@ class Users {
   }
 
   hasUsers() {
-    // TODO: Como saber se tem informação dentro da estrutura escolhida?
-    return false;
+    return this[this.#kData].size > 0    
   }
 
   size() {
