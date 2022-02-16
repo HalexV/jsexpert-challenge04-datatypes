@@ -24,4 +24,14 @@ describe('Entity Users', () => {
 
     expect(users.size()).toBe(1)
   })
+
+  it('should be able to verify if the data structure has users', () => {
+    const users = new Users()
+
+    expect(users.hasUsers()).toBe(false)
+
+    users.add({ id: 'any_id' })
+
+    expect(users.hasUsers()).toBe(true)
+  })
 })
