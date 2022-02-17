@@ -36,9 +36,9 @@ class CustomTerminal {
   }
 
   hasDataToPrint() {
-    // TODO: Como saber se tem informação dentro da estrutura escolhida?
-    return false;
+    return this[this.#kData].size > 0;
   }
+  
   /**
    * Dado um array de objetos, adiciona cada registro aos dados a serem impressos.
    * @param {Array<Crypto>} data
