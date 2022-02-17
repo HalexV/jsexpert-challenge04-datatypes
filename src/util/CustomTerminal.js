@@ -38,7 +38,7 @@ class CustomTerminal {
   hasDataToPrint() {
     return this[this.#kData].size > 0;
   }
-  
+
   /**
    * Dado um array de objetos, adiciona cada registro aos dados a serem impressos.
    * @param {Array<Crypto>} data
@@ -54,8 +54,7 @@ class CustomTerminal {
   }
 
   removeDataById(id) {
-    // TODO: Remove informação da estrutura escolhida.
-    return undefined;
+    return this[this.#kData].delete(id);
   }
 
   dataSize() {
