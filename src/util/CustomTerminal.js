@@ -12,9 +12,11 @@ const kPrint = Symbol('kPrint');
 const kTerminal = Symbol('kTerminal');
 
 class CustomTerminal {
+  #kData = Symbol('kData')
   constructor() {
     this[kPrint] = {};
     // TODO: inicializar a propriedade privada 'kData' como uma estrutura importante vista no curso
+    this[this.#kData] = new Map();
     this[kTerminal] = null;
   }
 
@@ -53,6 +55,10 @@ class CustomTerminal {
   removeDataById(id) {
     // TODO: Remove informação da estrutura escolhida.
     return undefined;
+  }
+
+  dataSize() {
+    return this[this.#kData].size
   }
 
   plotQuoteChart(data) {
