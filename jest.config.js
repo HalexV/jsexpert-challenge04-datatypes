@@ -78,7 +78,11 @@ export default {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "chalk": "chalk/source/index.js",
+    "#ansi-styles": "chalk/source/vendor/ansi-styles/index.js",
+    "#supports-color": "chalk/source/vendor/supports-color/index.js"
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
