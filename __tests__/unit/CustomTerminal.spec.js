@@ -12,7 +12,7 @@ describe('CustomTerminal', () => {
   })
 
   describe('addDataToPrint', () => {
-    it('should be able to add data to the structure data', () => {
+    it('should be able to add data to the data structure', () => {
       const customTerminal = new CustomTerminal()
 
       const fakeData = [
@@ -75,5 +75,41 @@ describe('CustomTerminal', () => {
     })
   })
   
+  describe('hasDataToPrint', () => {
+    it('should be able to return if the data structure has data', () => {
+      const customTerminal = new CustomTerminal()
+
+      const fakeData = [
+        {
+          id: 1,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        },
+        {
+          id: 2,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        },
+        {
+          id: 3,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        }
+      ]
+
+      const result1 = customTerminal.hasDataToPrint()
+
+      expect(result1).toBeFalsy()
+
+      customTerminal.addDataToPrint(fakeData)
+
+      const result2 = customTerminal.hasDataToPrint()
+
+      expect(result2).toBeTruthy()
+    })
+  })
   
 })
