@@ -111,5 +111,38 @@ describe('CustomTerminal', () => {
       expect(result2).toBeTruthy()
     })
   })
+
+  describe('removeDataById', () => {
+    it('should be able to remove a data from the data structure', () => {
+      const customTerminal = new CustomTerminal()
+
+      const fakeData = [
+        {
+          id: 1,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        },
+        {
+          id: 2,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        },
+        {
+          id: 3,
+          any1: 'any1',
+          any2: 'any2',
+          any3: 'any3'
+        }
+      ]
+
+      customTerminal.addDataToPrint(fakeData)
+      const result = customTerminal.removeDataById(2)
+
+      expect(result).toBeTruthy()
+      expect(customTerminal.dataSize()).toBe(2)
+    })
+  })
   
 })
