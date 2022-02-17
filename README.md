@@ -120,7 +120,7 @@ project
 
 - [ ] Deve implementar a estrutura esperada em `util/CustomTerminal.js`
 
-- [ ] Deve implementar os métodos existentes em `service/CryptoService.js`
+- [x] Deve implementar os métodos existentes em `service/CryptoService.js`
 
 - [x] Deve implementar a estrutura esperada no arquivo `entity/User.js`
 
