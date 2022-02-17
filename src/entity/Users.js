@@ -2,7 +2,7 @@ import User from './User.js';
 
 // TODO: Criar um Symbol para a propriedade privada 'kUsers'
 class Users {
-  #kData = Symbol('data');
+  #kData = Symbol('kData');
   constructor() {
     this[this.#kData] = new Set()
     return new Proxy(this, {
