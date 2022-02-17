@@ -29,8 +29,12 @@ class CustomTerminal {
   }
 
   draftTable() {
-    // TODO: Parece que a linha a seguir precisa de um array gerado a partir dos valores da estrutura escolhida...🤔
     const data = [];
+
+    for(const [, value] of this[this.#kData]){
+      data.push(value)
+    }
+
     const table = chalkTable(TABLE_OPTIONS, data);
     this[kPrint] = console.draft(table);
   }
