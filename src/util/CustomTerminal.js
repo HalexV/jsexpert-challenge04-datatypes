@@ -8,14 +8,12 @@ import terminalConfig from '../config/terminal.js';
 const TABLE_OPTIONS = terminalConfig.table;
 
 const kPrint = Symbol('kPrint');
-// TODO: Criar um Symbol para a propriedade privada 'kData'
 const kTerminal = Symbol('kTerminal');
 
 class CustomTerminal {
   #kData = Symbol('kData')
   constructor() {
     this[kPrint] = {};
-    // TODO: inicializar a propriedade privada 'kData' como uma estrutura importante vista no curso
     this[this.#kData] = new Map();
     this[kTerminal] = null;
   }
