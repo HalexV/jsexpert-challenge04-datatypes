@@ -10,13 +10,18 @@ class CryptoService {
     let data = null
     let page = 1
     let response = null
+    let cryptosArray = null
 
     while(1){
       try {
-        response = await this.repository.list(++page)
+        response = await this.repository.list(page)
+        page++
+
         data = response.data
 
-        yield new Crypto(data)
+        cryptosArray = data.map(cryptoData => new Crypto(cryptoData))
+
+        yield cryptosArray
       } catch (error) {
         console.error(error)
         break
