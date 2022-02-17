@@ -6,7 +6,6 @@ class CryptoService {
     this.repository = repository || new CryptoRepository();
   }
   async *list() {
-    // TODO: implementar generator que chama a repository fazendo a paginação
     let data = null
     let page = 1
     let response = null
