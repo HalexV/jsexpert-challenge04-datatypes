@@ -1,3 +1,5 @@
+Hálex Viotto Gomes
+
 # Story: Sua própria carteira Crypto
 
 ## Motivação
@@ -39,9 +41,8 @@ O Consumer será o nosso cliente Websocket que receberá as cryptos recomendadas
 ### Processo 02 (Wallet | Consumer)
 
 - Mostrar graficamente a crypto moeda selecionada atual
-- Ouvir o evento de seleção de moeda para dicionar a moeda na Wallet
-dicionar a moeda na Wallet
-- Selecionar uma das moedas na Wallet para ser a moeda representada no gr[áfico
+- Ouvir o evento de seleção de moeda para adicionar a moeda na Wallet
+- Selecionar uma das moedas na Wallet para ser a moeda representada no gráfico
 - Excluir uma das moedas na Wallet
 
 ## Estruturas esperadas
@@ -78,7 +79,7 @@ https://user-images.githubusercontent.com/41883467/153467415-9c8091d2-97dc-4fcc-
 ### Extras
 
 - [ ] Desafio opcional: Caso queira, valide se é possível a implementação com WeakSet e WeakMap, implemente e/ou deixe um comentário sobre no código.
-- [ ] Desafio opcional: Caso queira, tente aplicar alguns testes no desafio e entender o funcionamento de cada trecho mais a fundo.
+- [x] Desafio opcional: Caso queira, tente aplicar alguns testes no desafio e entender o funcionamento de cada trecho mais a fundo.
 
 
 ### Arquitetura e onde trabalhar
@@ -118,7 +119,7 @@ project
 
 ### Checklist features
 
-- [ ] Deve implementar a estrutura esperada em `util/CustomTerminal.js`
+- [x] Deve implementar a estrutura esperada em `util/CustomTerminal.js`
 
 - [x] Deve implementar os métodos existentes em `service/CryptoService.js`
 
