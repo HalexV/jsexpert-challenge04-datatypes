@@ -44,16 +44,13 @@ class CustomTerminal {
    * @param {Array<Crypto>} data
    */
   addDataToPrint(data) {
-    // TODO: inserir valor na estrutura escolhida. // dica: talvez o data.id seja uma informação importante nesse trecho
     data.forEach(data => {
-      const { id, ...value } = data
-      this[this.#kData].set(id, value)
+      this[this.#kData].set(data.id, data)
     })
   }
 
   getDataById(id) {
-    // TODO: Pegar informação da estrutura escolhida.
-    return undefined;
+    return this[this.#kData].get(id);
   }
 
   removeDataById(id) {
