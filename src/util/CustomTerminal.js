@@ -10,6 +10,14 @@ const TABLE_OPTIONS = terminalConfig.table;
 const kPrint = Symbol('kPrint');
 const kTerminal = Symbol('kTerminal');
 
+/**
+ * Inviável o uso do WeakMap pois:
+ * 1. O programa necessita de informações sobre se a estrutura de dados possui ou não dados. O WeakMap infelizmente não possui formas de verificar isso.
+ * 2. O programa precisa da lista de itens presentes na estrutura de dados. O WeakMap não possui mecanismos de iteração.
+ * 3. O WeakMap só aceita objetos como chaves.
+ * 4. Tentar usar uma estrutura auxiliar como um array para guardar as chaves e recuperar os valores do WeakMap através de um 'for' no array chamando WeakMap.get() é uma complexidade adicional desnecessária. Basta usar o Map normal mesmo.
+ */
+
 class CustomTerminal {
   #kData = Symbol('kData')
   constructor() {

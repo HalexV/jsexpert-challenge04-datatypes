@@ -78,7 +78,7 @@ https://user-images.githubusercontent.com/41883467/153467415-9c8091d2-97dc-4fcc-
 
 ### Extras
 
-- [ ] Desafio opcional: Caso queira, valide se é possível a implementação com WeakSet e WeakMap, implemente e/ou deixe um comentário sobre no código.
+- [x] Desafio opcional: Caso queira, valide se é possível a implementação com WeakSet e WeakMap, implemente e/ou deixe um comentário sobre no código.
 - [x] Desafio opcional: Caso queira, tente aplicar alguns testes no desafio e entender o funcionamento de cada trecho mais a fundo.
 
 

@@ -1,6 +1,11 @@
 import User from './User.js';
 
-// TODO: Criar um Symbol para a propriedade privada 'kUsers'
+/**
+ * Inviável o uso do WeakSet pois:
+ * 1. O programa necessita de informações sobre se a estrutura de dados possui ou não dados. O WeakSet infelizmente não possui formas de verificar isso.
+ * 2. O programa precisa da lista de itens presentes na estrutura de dados. O WeakSet não possui mecanismos de iteração.
+ */
+
 class Users {
   #kData = Symbol('kData');
   constructor() {
